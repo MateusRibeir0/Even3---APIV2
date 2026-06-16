@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://static.even3.com/content/img/logos/logo-even3-light.svg" height="48" alt="Even3" />
 
-  <h1>Even3 API V2 — Insomnia Collection</h1>
+  <h1>Insomnia Collection</h1>
 
   <p>Collection pronta para importar no Insomnia e testar todos os endpoints da API pública da Even3</p>
 

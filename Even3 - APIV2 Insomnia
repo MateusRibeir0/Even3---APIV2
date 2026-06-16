@@ -1,0 +1,535 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Even3 - API
+meta:
+  id: wrk_00da826903de4c4b91f78c1a70bb9310
+  created: 1781264402211
+  modified: 1781264402211
+  description: ""
+collection:
+  - name: Eventos
+    meta:
+      id: fld_6796de8794684b22ac3cb11737ec7170
+      created: 1781270400305
+      modified: 1781270451831
+      sortKey: -1781270400305
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/events
+        name: Eventos
+        meta:
+          id: req_f0f4ba6cc3a140d6a08d4f7ca54598a7
+          created: 1781270585726
+          modified: 1781627610597
+          isPrivate: false
+          description: ""
+          sortKey: -1781270585726
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/events
+        name: Entradas Eventos
+        meta:
+          id: req_4c329341996c47e3a5b8e3d3bd8fa007
+          created: 1781270972535
+          modified: 1781627617499
+          isPrivate: false
+          description: ""
+          sortKey: -1781270585676
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Certificados
+    meta:
+      id: fld_d23356ce68a64e37a7d76be08bafaf9d
+      created: 1781270460307
+      modified: 1781270532787
+      sortKey: -1781270507062
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/certificates
+        name: Certificados
+        meta:
+          id: req_0cbf8b02ea7146e9899ec21d4e6e88c7
+          created: 1781627639985
+          modified: 1781627669335
+          isPrivate: false
+          description: ""
+          sortKey: -1781627639985
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/certificates/{id_pessoa}
+        name: Detalha certificado
+        meta:
+          id: req_762dcb33020f4cf8a9b978919cb0f615
+          created: 1781627682614
+          modified: 1781627695284
+          isPrivate: false
+          description: ""
+          sortKey: -1781449112855.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Credenciamento
+    meta:
+      id: fld_10fe1def438a482ab4c3411810516ea0
+      created: 1781270468454
+      modified: 1781270534850
+      sortKey: -1781270507012
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/checkin/attendees
+        name: Credencia evento
+        meta:
+          id: req_ea30d4f458d54171bd2994c8692b5902
+          created: 1781629157879
+          modified: 1781629206324
+          isPrivate: false
+          description: ""
+          sortKey: -1781629157879
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "attendees": [
+                {
+                  "checkin_code": {checkin_code},
+                  "checkin": true
+                }
+              ]
+            }
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/checkin/attendees
+        name: Credencia atividade
+        meta:
+          id: req_289a79977331443d977793a01ae32c23
+          created: 1781629217772
+          modified: 1781629226909
+          isPrivate: false
+          description: ""
+          sortKey: -1781629133644
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "sessions": [
+                {
+                  "id_session": {id_session},
+                  "id_attendees": {id_attendees},
+                  "checkin": true,
+                  "checkin_date": "2026-06-15T14:30:00"
+                }
+              ]
+            }
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pagamentos
+    meta:
+      id: fld_b35db29b588a4e1bb19b1ce2cfd8103e
+      created: 1781270476523
+      modified: 1781270541584
+      sortKey: -1781270500832.5
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/payments
+        name: Pagamentos
+        meta:
+          id: req_31ed4974a2a848e7b7bbbd21628ff68f
+          created: 1781627883568
+          modified: 1781627914575
+          isPrivate: false
+          description: ""
+          sortKey: -1781627883568
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/payments/details/{reference_payment}
+        name: Detalha pagamento
+        meta:
+          id: req_21174688779841dca3ba20e75bea5a58
+          created: 1781627924817
+          modified: 1781628248310
+          isPrivate: false
+          description: ""
+          sortKey: -1781627792695.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Página do evento
+    meta:
+      id: fld_67b7bf786f134aaaa85a27bf63868b85
+      created: 1781270487995
+      modified: 1781270487995
+      sortKey: -1781270487995
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/hotsite
+        name: Página do evento
+        meta:
+          id: req_7074ceddd7bf4d40917dddba088cc6d4
+          created: 1781629109409
+          modified: 1781629149245
+          isPrivate: false
+          description: ""
+          sortKey: -1781629109409
+        method: GET
+        headers:
+          - name: ""
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pessoas
+    meta:
+      id: fld_c346b68583d14f218811896ebe7486f0
+      created: 1781270494703
+      modified: 1781270494703
+      sortKey: -1781270494703
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/attendees
+        name: Participantes
+        meta:
+          id: req_66697190dc634d46a01c669bdc79ed11
+          created: 1781627701823
+          modified: 1781627751698
+          isPrivate: false
+          description: ""
+          sortKey: -1781627701823
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/attendees/{id_attendees}
+        name: Detalha participantes
+        meta:
+          id: req_702158613cc24cd987b1c0ed62ee3556
+          created: 1781627743790
+          modified: 1781627763840
+          isPrivate: false
+          description: ""
+          sortKey: -1781627670904
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/attendees/create
+        name: Adiciona participantes
+        meta:
+          id: req_a21f7660e8204244b75fde4900c5e1e1
+          created: 1781627780685
+          modified: 1781627856618
+          isPrivate: false
+          description: ""
+          sortKey: -1781627655444.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "Teste Even3",
+              "bagde_name": "",
+              "email": "testeeven3@even3.com",
+              "gender": "M",
+              "photo": "",
+              "registration_confirmed": false
+            }
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Submissões
+    meta:
+      id: fld_d74790f018004a4dac759959cf582249
+      created: 1781270506962
+      modified: 1781270506962
+      sortKey: -1781270506962
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/submission/proceedings
+        name: Processos
+        meta:
+          id: req_ec04a18a092b4f86aadd496e6db45f2b
+          created: 1781629019252
+          modified: 1781629042348
+          isPrivate: false
+          description: ""
+          sortKey: -1781629019252
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/submission/proceedings
+        name: Configurações submissão
+        meta:
+          id: req_5bc15ca1d58545c18e9dcc7f0db003ca
+          created: 1781629050528
+          modified: 1781629050528
+          isPrivate: false
+          description: ""
+          sortKey: -1781628635823.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/submission/proceedings
+        name: Submissões e apresentações
+        meta:
+          id: req_753cb89bc6e94dcfb10728c76ef8478f
+          created: 1781629063701
+          modified: 1781629063701
+          isPrivate: false
+          description: ""
+          sortKey: -1781628444109.25
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Programação
+    meta:
+      id: fld_7ad5679376864b0a9d6c1838f1e47df2
+      created: 1781270570974
+      modified: 1781270570974
+      sortKey: -1781270570974
+      description: ""
+    children:
+      - url: https://api.even3.com/api/v2/schedule
+        name: Programação
+        meta:
+          id: req_c7988aab9dd44993aa506c21483c24f9
+          created: 1781628252395
+          modified: 1781628971732
+          isPrivate: false
+          description: ""
+          sortKey: -1781628252395
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/schedule/session
+        name: Atividades
+        meta:
+          id: req_38b4a947c2c64da095c3d04cedfd9903
+          created: 1781628980083
+          modified: 1781628989003
+          isPrivate: false
+          description: ""
+          sortKey: -1781628067981.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://api.even3.com/api/v2/schedule/speaker
+        name: Palestrantes
+        meta:
+          id: req_c323317c2d24478e89f42fd62f646c57
+          created: 1781628997092
+          modified: 1781629006668
+          isPrivate: false
+          description: ""
+          sortKey: -1781627975774.75
+        method: GET
+        headers:
+          - name: Authorization
+            value: "Bearer "
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0cb2bf383727c7b1e986955e15e9cbef61d75fe6
+    created: 1781264402229
+    modified: 1781264402229
+environments:
+  name: Base Environment
+  meta:
+    id: env_0cb2bf383727c7b1e986955e15e9cbef61d75fe6
+    created: 1781264402220
+    modified: 1781264402220
+    isPrivate: false

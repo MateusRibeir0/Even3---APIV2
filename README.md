@@ -19,7 +19,7 @@
 
 Este repositório contém a **collection oficial da API pública da Even3 V2** no formato compatível com o [Insomnia](https://insomnia.rest/). Com ela, você pode testar todos os endpoints disponíveis sem precisar configurar as requisições do zero.
 
-> 📖 Documentação completa: [thjkz9i8jw.apidog.io](https://thjkz9i8jw.apidog.io)
+> 📖 Documentação completa: [developers.even3.com/inicio-2178794m0](https://developers.even3.com/inicio-2178794m0)
 
 ---
 
